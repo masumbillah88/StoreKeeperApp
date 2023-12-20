@@ -31,4 +31,8 @@ class SaleController extends Controller
         $products->decrement('quantity', $validatedData['quantity']);
         return redirect()->route('sale.index')->with('success', 'Sale completed successfully');
     }
+    public function SalesReport(){
+        $sales = DB::table('sales')->get();
+        return view('products.salesTransaction', compact('sales'));
+    }
 }

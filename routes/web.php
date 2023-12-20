@@ -29,3 +29,4 @@ Route::post('/sale', [SaleController::class, 'store'])->name('sale.store');
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/product/{product}/edit', [ProductController::class, 'edit'])->name('product.edit');
 Route::put('/product/{product}', [ProductController::class, 'update'])->name('product.update');
+Route::get('/product/salesTransaction', [SaleController::class, 'SalesReport'])->name('product.SalesReport');

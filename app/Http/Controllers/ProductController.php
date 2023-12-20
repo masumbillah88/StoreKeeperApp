@@ -26,7 +26,7 @@ class ProductController extends Controller
 
         ]);
         $newProduct = Product::create($data);
-        return redirect(route('product.app'));
+        return redirect(route('product.app'))->with('success','Product added successfully.');
     }
     public function edit($id){
         $productsArray = Product::where('id',$id)->first();
